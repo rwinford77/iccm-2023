@@ -1,0 +1,7 @@
+{
+  "name": "rewtabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
