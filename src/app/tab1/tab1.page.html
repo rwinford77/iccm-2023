@@ -13,5 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-button (click)="addItem()">Add Friend</ion-button>
+
+  <ion-list *ngFor="let friend of friends; let i = index">
+    <ion-item (click)="changeItem(i)">
+      <ion-avatar slot="start">
+        <img src="https://axelscheffler.de/assets/portraits/axel.jpg">
+      </ion-avatar>
+      <ion-label>
+        <ion-text class="friend">{{ friend.name }}</ion-text><br>
+        <ion-text class="email">{{ friend.email }}</ion-text><br>
+        <ion-text class="phone">{{ friend.phone }}</ion-text><br>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
